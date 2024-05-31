@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-[#985ACE]">
+    <div
+      class="w-[420px] m-auto mt-20 rounded-2xl bg-white p-5 py-12 shadow-xl"
+    >
+      <h1 class="text-center text-3xl font-semibold mb-5">Sign in</h1>
+      <form class="js-login-form" autocomplete="on">
+        <input
+          class="bg-[#F8F1FF] w-80 p-3 mb-3 rounded-md placeholder:text-[#8a8393d1] m-auto block outline-none js-login-email"
+          type="email"
+          name="user_email"
+          aria-label="email"
+          placeholder="email"
+          required
+        />
+        <input
+          class="bg-[#F8F1FF] w-80 p-3 mb-3 rounded-md placeholder:text-[#8a8393d1] m-auto block outline-none js-login-password"
+          type="password"
+          name="user_password"
+          aria-label="password"
+          placeholder="password"
+          required
+        />
+        <button
+          class="w-80 mt-8 rounded-md p-[10px] bg-[#985ACE] m-auto block text-md text-white"
+          type="submit"
+        >
+          Sign in
+        </button>
+      </form>
+      <hr class="border-black my-5 w-80 m-auto" />
+      <button
+        class="w-80 p-2 rounded-md m-auto mt-5 flex items-center justify-center gap-5 border-2 border-purple-300"
+        type="button"
+      >
+        <img class="w-6" src="./images/google.png" alt="google" />
+        <a href="#"> продолжить с <span class="font-semibold">Google</span></a>
+      </button>
+      <a
+        class="text-blue-600 font-semibold mt-6 border-b-2 border-blue-600 m-auto w-[160px] opacity-80 text-center block"
+        href="./register.html"
+        >Create your account</a
+      >
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

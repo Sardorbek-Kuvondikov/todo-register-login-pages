@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body>
+    <div class="w-[500px] m-auto mt-5 p-5 relative">
+      <h1 class="text-center mb-5 text-3xl text-blue-600 font-semibold">
+        Todo List
+      </h1>
+      <form class="flex gap-5 relative js-todo-form" autocomplete="off">
+        <input
+          class="w-full rounded-3xl p-3 border-2 outline-none js-todo-input"
+          type="text"
+          name="todo_name"
+          aria-label="Enter your work"
+          placeholder="Enter your work"
+          minlength="1"
+          maxlength="40"
+          required
+        />
+        <button
+          class="p-[13px] px-6 bg-blue-500 text-white absolute top-0 right-0 rounded-r-3xl"
+          type="submit"
+        >
+          Add
+        </button>
+      </form>
+
+      <ol class="mt-5 js-todo-render-list"></ol>
+      <button class="text-blue-600 text-xl absolute top-0 left-0 js-back-btn">
+        <i class="fa-solid fa-arrow-left"></i> back
+      </button>
+    </div>
+
+    <!-- Todo edit modal -->
+    <div
+      class="w-[460px] m-auto p-5 rounded-2xl mt-5 shadow-lg absolute top-5 left-[35%] right-[35%] z-10 bg-white hidden js-edit-card"
+    >
+      <h2 class="mb-2 text-xl font-semibold opacity-60">Edit!</h2>
+      <form class="flex relative js-todo-value-edit" autocomplete="off">
+        <input
+          class="w-full rounded-3xl p-2 pl-4 border-2 outline-none js-edit-input"
+          type="text"
+          name="edit_name"
+          aria-label="Edit"
+          placeholder="Edit..."
+          minlength="1"
+          maxlength="40"
+          required
+        />
+        <button
+          class="p-[9px] px-6 bg-blue-500 text-white absolute top-0 right-0 rounded-r-3xl"
+          type="submit"
+        >
+          Edit
+        </button>
+      </form>
+    </div>
+
+    <div>
+      <ul class="absolute top-10 right-10 translate-x-10 invisible js-update">
+        <li
+          class="w-52 text-xl rounded-sm p-2 pl-4 bg-emerald-400 text-white relative"
+        >
+          updated <i class="fa-solid fa-check absolute top-3 right-6"></i>
+        </li>
+      </ul>
+      <ul class="absolute top-10 right-10 translate-x-10 invisible js-delete">
+        <li
+          class="w-52 text-xl rounded-sm p-2 pl-4 bg-red-400 text-white relative"
+        >
+          deleted <i class="fa-solid fa-check absolute top-3 right-6"></i>
+        </li>
+      </ul>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

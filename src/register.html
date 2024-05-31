@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register page</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-[#985ACE]">
+    <div
+      class="border-2 w-[458px] m-auto mt-16 rounded-3xl bg-white p-5 py-12 shadow-xl"
+    >
+      <h1 class="text-center text-3xl font-semibold mb-5">Sign up</h1>
+      <form class="js-register-form" autocomplete="off">
+        <input
+          class="bg-[#F8F1FF] w-80 p-3 mb-3 rounded-md placeholder:text-[#8a8393d1] m-auto block outline-none js-user-name"
+          type="text"
+          aria-label="Enter your name"
+          placeholder="Enter your name"
+          name="user_name"
+          required
+        />
+
+        <input
+          class="bg-[#F8F1FF] w-80 p-3 mb-3 rounded-md placeholder:text-[#8a8393d1] m-auto block outline-none js-user-phone-number"
+          type="tel"
+          aria-label="Enter your phone number"
+          placeholder="Enter your phone number"
+          name="user_phone_number"
+          required
+        />
+
+        <input
+          class="bg-[#F8F1FF] w-80 p-3 mb-3 rounded-md placeholder:text-[#8a8393d1] m-auto block outline-none js-user-email"
+          type="email"
+          aria-label="Enter your email"
+          placeholder="Enter your email"
+          name="user_email"
+          required
+        />
+
+        <div class="w-80 relative m-auto">
+          <input
+            class="bg-[#F8F1FF] w-80 p-3 mb-9 rounded-md placeholder:text-[#8a8393d1] m-auto block outline-none js-user-password"
+            type="password"
+            aria-label="Create your password"
+            placeholder="Create your password"
+            name="user_password"
+            required
+          />
+
+          <button
+            class="w-8 h-8 bg-center bg-no-repeat absolute top-2 right-1 js-password-eye"
+            type="button"
+          >
+            <img class="js-off-eye" src="./images/eye-off.png" alt="eye" />
+            <img
+              class="w-[60%] hidden js-open-eye"
+              src="./images/eye-on.png"
+              alt="eye"
+            />
+          </button>
+        </div>
+
+        <button
+          class="w-80 rounded-md p-[10px] bg-[#985ACE] m-auto block text-md text-white"
+          type="submit"
+        >
+          Sign up
+        </button>
+      </form>
+      <hr class="mt-5 w-80 m-auto border-black" />
+      <button
+        class="w-80 p-2 rounded-md m-auto mt-5 flex items-center justify-center gap-5 border-2 border-purple-300"
+        type="button"
+      >
+        <img class="w-6" src="./images/google.png" alt="google" />
+        <a href="#"> продолжить с <span class="font-semibold">Google</span></a>
+      </button>
+      <p class="text-center mt-8 font-semibold opacity-70">
+        Already have account
+        <a
+          class="text-blue-600 font-semibold border-b-2 ml-1 border-blue-600"
+          href="./login.html"
+          >Sign in</a
+        >
+      </p>
+    </div>
+    <script src="register.js"></script>
+  </body>
+</html>
